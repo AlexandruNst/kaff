@@ -12,6 +12,11 @@ body {
   font-weight: 600;
 }
 
+#sourcing .row .-card p:first-child {
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+}
+
 #landing .-navbar .-brand {
   font-family: "Righteous", cursive;
 }
@@ -416,6 +421,44 @@ body {
 
 #sourcing .-div-text {
   padding: 17rem 0;
+}
+
+#sourcing .row .col-12 {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+#sourcing .row .col-12 .-dots-purple {
+  position: absolute;
+  top: -7rem;
+  right: 0;
+  width: 50%;
+}
+
+#sourcing .row .col-12 .-dots-purple span {
+  background-color: #6d214f;
+}
+
+#sourcing .row .-card {
+  background-color: #f8efba;
+  margin: 0 3vw;
+  height: 100%;
+  padding: 7rem 0;
+}
+
+#sourcing .row .-card p {
+  width: 60%;
+  margin: auto;
+  text-align: center;
+}
+
+#sourcing .row .-card p:first-child {
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+}
+
+#sourcing .row .-card p:last-child {
+  font-size: 1.5rem;
 }
 
 @use 'base';
