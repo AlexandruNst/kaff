@@ -4,33 +4,38 @@
 
 body {
   font-family: "Mulish", sans-serif;
-  font-size: 300;
+  font-weight: 300;
+}
+
+#future .-div-decorations .-yellow-bar div, #video .-div-video-card div {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
 }
 
 #landing .-navbar .-brand {
   font-family: "Righteous", cursive;
 }
 
-#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange {
+#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange {
   display: inline-block;
   width: 20vw;
   height: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange {
+  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange {
     width: 10vw;
     height: 10vw;
   }
 }
 
-#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar {
+#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
   display: inline-block;
   width: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar {
+  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
     width: 10vw;
   }
 }
@@ -42,6 +47,10 @@ body {
 
 .-link:hover {
   text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .-div-text {
@@ -135,7 +144,7 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 10rem;
+  height: 12rem;
   width: 80%;
   background-color: #f8efba;
 }
@@ -157,14 +166,14 @@ body {
 #landing .-decoration .-orange-square {
   background-color: #fea47f;
   position: absolute;
-  bottom: 10rem;
+  bottom: 12rem;
   right: 0;
 }
 
 #landing .-decoration .-yellow-pillar {
   background-color: #f8efba;
   position: absolute;
-  bottom: calc(10rem + 10vw);
+  bottom: calc(12rem + 10vw);
   right: 10vw;
   height: 40%;
 }
@@ -180,7 +189,7 @@ body {
 #landing .-decoration .-dots-yellow {
   position: absolute;
   width: 14vw;
-  bottom: calc(10rem + 10vw - 9rem);
+  bottom: calc(12rem + 10vw - 9rem);
   right: calc(10vw - 8rem);
 }
 
@@ -257,6 +266,156 @@ body {
 #future {
   background-color: #6d214f;
   color: #f2f3f7;
+  position: relative;
+}
+
+#future img {
+  width: 100%;
+  position: absolute;
+}
+
+#future .-div-text {
+  padding-top: 55%;
+  padding-bottom: 30rem;
+}
+
+#future .-div-decorations .-yellow-pillar {
+  position: absolute;
+  top: -10vw;
+  right: 10vw;
+  height: 40rem;
+  background-color: #f8efba;
+}
+
+#future .-div-decorations .-dots-orange {
+  position: absolute;
+  width: 40%;
+  right: 0;
+  top: 3rem;
+  opacity: 0.3;
+}
+
+#future .-div-decorations .-dots-orange span {
+  background-color: #fea47f;
+}
+
+#future .-div-decorations .-square-orange {
+  position: absolute;
+  bottom: 12rem;
+  right: 0;
+  background-color: #fea47f;
+}
+
+#future .-div-decorations .-yellow-bar {
+  position: absolute;
+  height: 12rem;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 10vw);
+  background-color: #f8efba;
+  color: #6d214f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#future .-div-decorations .-yellow-bar div {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1.4rem;
+}
+
+#future .-div-decorations .-yellow-bar div i {
+  font-size: 4rem;
+}
+
+#future .-div-decorations .-dots-yellow {
+  position: absolute;
+  bottom: 17rem;
+  right: 0;
+  width: 25%;
+}
+
+#future .-div-decorations .-dots-yellow span {
+  background-color: #f8efba;
+}
+
+#video {
+  background-color: #6d214f;
+  color: #6d214f;
+  position: relative;
+}
+
+#video .-div-video {
+  padding: 17rem 0;
+}
+
+#video .-div-video-card {
+  width: 30%;
+  background-color: #f2f3f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  position: relative;
+}
+
+#video .-div-video-card img {
+  width: 65%;
+  margin: 0.4rem;
+}
+
+#video .-div-video-card div {
+  text-align: center;
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video .-div-decorations .-dots-orange {
+  position: absolute;
+  right: 15rem;
+  bottom: 10rem;
+  width: 40%;
+}
+
+#video .-div-decorations .-dots-orange span {
+  background-color: #fea47f;
+}
+
+#video .-div-decorations .-square-orange {
+  position: absolute;
+  background-color: #fea47f;
+  left: 0;
+  bottom: 10vw;
+}
+
+#sourcing {
+  background-color: #f2f3f7;
+  color: #6d214f;
+  position: relative;
+}
+
+#sourcing .-div-decorations .-yellow-pillar {
+  position: absolute;
+  top: -10vw;
+  left: 10vw;
+  height: 45rem;
+  background-color: #f8efba;
+}
+
+#sourcing .-div-text {
+  padding: 17rem 0;
 }
 
 @use 'base';

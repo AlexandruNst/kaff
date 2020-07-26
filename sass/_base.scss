@@ -11,17 +11,17 @@ $white: #f2f3f7;
 
 %font-normal {
   font-family: "Mulish", sans-serif;
-  font-size: 300;
+  font-weight: 300;
 }
 
 %font-normal-medium {
   font-family: "Mulish", sans-serif;
-  font-size: 600;
+  font-weight: 600;
 }
 
 %font-normal-bold {
   font-family: "Mulish", sans-serif;
-  font-size: 900;
+  font-weight: 900;
 }
 
 %font-brand {
@@ -31,7 +31,7 @@ $white: #f2f3f7;
 // Squares
 $square-size: 10vw;
 $square-size-mobile: 20vw;
-$bar-height: 10rem;
+$bar-height: 12rem;
 
 %square {
   display: inline-block;
@@ -73,6 +73,7 @@ $page-margin: 15%;
 
 body {
   @extend %font-normal;
+  overflow-x: hidden;
 }
 
 .-div-text {
