@@ -1,1 +1,129 @@
 @use 'base';
+
+#landing {
+  background-color: $purple;
+  color: $white;
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+
+  .-navbar {
+    height: 8rem;
+    width: 100%;
+    padding: 0 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .-brand {
+      @extend %font-brand;
+      font-size: 3rem;
+    }
+    ul {
+      //   padding-left: 0;
+      display: inline-block;
+      font-size: 1.5rem;
+      vertical-align: middle;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 3rem;
+      }
+    }
+    .-nav-right {
+      display: inline-block;
+      font-size: 1.5rem;
+      i {
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  .-landing-text {
+    margin-left: $page-margin;
+    margin-top: 6rem;
+    h1 {
+      //   @extend %font-title;
+      //   font-size: 7vw;
+    }
+    p {
+      //   font-size: 1.3rem;
+      //   width: 60%;
+      //   margin-top: 2rem;
+    }
+  }
+  .-decoration {
+    .-yellow-bar {
+      color: $purple;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: $bar-height;
+      width: 80%;
+      background-color: $yellow;
+      div {
+        height: 100%;
+        display: inline-block;
+        text-align: center;
+        margin: 0 3rem;
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        i {
+          font-size: 3rem;
+          margin: 0 1rem;
+        }
+      }
+    }
+    .-orange-square {
+      @extend %square;
+      background-color: $orange;
+      position: absolute;
+      bottom: $bar-height;
+      right: 0;
+    }
+    .-yellow-pillar {
+      @extend %square-width;
+      background-color: $yellow;
+      position: absolute;
+      bottom: calc(#{$bar-height} + #{$square-size});
+      right: $square-size;
+      height: 40%;
+    }
+    .-orange-bar {
+      @extend %square-width;
+      background-color: $orange;
+      position: absolute;
+      top: 93%;
+      right: 80%;
+      height: 40rem;
+    }
+  }
+}
+
+#tradition {
+  color: $purple;
+  position: relative;
+  .-div-tradition {
+    .-div-text {
+      margin-left: $page-margin;
+      padding-top: 17rem;
+    }
+  }
+  .-div-decoration {
+    .-est {
+      position: absolute;
+      right: 10%;
+      top: -9vw;
+      @extend %font-title;
+      line-height: 8vw;
+      span:first-child {
+        font-size: 3vw;
+        vertical-align: bottom;
+        margin-left: 1rem;
+      }
+      span:last-child {
+        font-size: 14vw;
+        vertical-align: top;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+// Colors
+$purple: #6d214f;
+$yellow: #f8efba;
+$orange: #fea47f;
+$white: #f2f3f7;
+
+// Fonts
+%font-title {
+  font-family: "Yeseva One", cursive;
+}
+
+%font-normal {
+  font-family: "Mulish", sans-serif;
+  font-size: 300;
+}
+
+%font-normal-medium {
+  font-family: "Mulish", sans-serif;
+  font-size: 600;
+}
+
+%font-normal-bold {
+  font-family: "Mulish", sans-serif;
+  font-size: 900;
+}
+
+%font-brand {
+  font-family: "Righteous", cursive;
+}
+
+// Squares
+$square-size: 10vw;
+$square-size-mobile: 20vw;
+$bar-height: 10rem;
+
+%square {
+  display: inline-block;
+  width: $square-size-mobile;
+  height: $square-size-mobile;
+  @media (min-width: 992px) {
+    width: $square-size;
+    height: $square-size;
+  }
+}
+
+%square-width {
+  display: inline-block;
+  width: $square-size-mobile;
+  @media (min-width: 992px) {
+    width: $square-size;
+  }
+}
+
+%square-height {
+  display: inline-block;
+  height: $square-size-mobile;
+  @media (min-width: 992px) {
+    height: $square-size;
+  }
+}
+
+// Margins
+$page-margin-small: 2rem;
+$page-margin: 15%;
+
+.-link {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body {
+  @extend %font-normal;
+}
+
+.-div-text {
+  h1 {
+    font-size: 7vw;
+    @extend %font-title;
+    position: relative;
+
+    &:after {
+      content: "";
+      bottom: -4%;
+      left: 0;
+      position: absolute;
+      width: 10%;
+      height: 8px;
+    }
+
+    &.-p {
+      &:after {
+        background-color: $purple;
+      }
+    }
+
+    &.-w {
+      &:after {
+        background-color: $white;
+      }
+    }
+  }
+  p {
+    font-size: 1.3rem;
+    width: 60%;
+    margin-top: 3.5rem;
+  }
+}
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) { ... }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
