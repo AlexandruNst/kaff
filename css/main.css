@@ -11,26 +11,26 @@ body {
   font-family: "Righteous", cursive;
 }
 
-#landing .-decoration .-orange-square {
+#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange {
   display: inline-block;
   width: 20vw;
   height: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-orange-square {
+  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange {
     width: 10vw;
     height: 10vw;
   }
 }
 
-#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar {
+#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar {
   display: inline-block;
   width: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar {
+  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar {
     width: 10vw;
   }
 }
@@ -42,6 +42,10 @@ body {
 
 .-link:hover {
   text-decoration: none;
+}
+
+.-div-text {
+  margin-left: 15%;
 }
 
 .-div-text h1 {
@@ -69,7 +73,7 @@ body {
 .-div-text p {
   font-size: 1.3rem;
   width: 60%;
-  margin-top: 3.5rem;
+  margin-top: 4rem;
 }
 
 @use 'base';
@@ -122,8 +126,8 @@ body {
 }
 
 #landing .-landing-text {
-  margin-left: 15%;
   margin-top: 6rem;
+  z-index: 20;
 }
 
 #landing .-decoration .-yellow-bar {
@@ -173,14 +177,37 @@ body {
   height: 40rem;
 }
 
+#landing .-decoration .-dots-yellow {
+  position: absolute;
+  width: 14vw;
+  bottom: calc(10rem + 10vw - 9rem);
+  right: calc(10vw - 8rem);
+}
+
+#landing .-decoration .-dots-yellow span {
+  background-color: #f8efba;
+}
+
+#landing .-decoration .-dots-orange {
+  position: absolute;
+  opacity: 0.2;
+  width: 40vw;
+  top: 9rem;
+  left: 5rem;
+  z-index: 0;
+}
+
+#landing .-decoration .-dots-orange span {
+  background-color: #fea47f;
+}
+
 #tradition {
   color: #6d214f;
   position: relative;
 }
 
 #tradition .-div-tradition .-div-text {
-  margin-left: 15%;
-  padding-top: 17rem;
+  padding: 17rem 0;
 }
 
 #tradition .-div-decoration .-est {
@@ -201,5 +228,43 @@ body {
   vertical-align: top;
 }
 
+#tradition .-div-decoration .-dots-orange {
+  position: absolute;
+  right: 12%;
+  top: 2vw;
+  width: 20vw;
+}
+
+#tradition .-div-decoration .-dots-orange span {
+  background-color: #fea47f;
+}
+
+#tradition .-div-decoration .-square-orange {
+  background-color: #fea47f;
+  position: absolute;
+  bottom: 10vw;
+  right: 0;
+}
+
+#tradition .-div-decoration .-yellow-pillar {
+  background-color: #f8efba;
+  position: absolute;
+  top: calc(100% - 10vw);
+  right: 10vw;
+  height: 30rem;
+}
+
+#future {
+  background-color: #6d214f;
+  color: #f2f3f7;
+}
+
 @use 'base';
+.-dots span {
+  width: 3%;
+  padding-top: 3%;
+  margin: 6%;
+  display: inline-block;
+  border-radius: 100%;
+}
 /*# sourceMappingURL=main.css.map */

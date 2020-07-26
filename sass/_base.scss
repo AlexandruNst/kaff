@@ -76,6 +76,8 @@ body {
 }
 
 .-div-text {
+  margin-left: $page-margin;
+
   h1 {
     font-size: 7vw;
     @extend %font-title;
@@ -105,7 +107,7 @@ body {
   p {
     font-size: 1.3rem;
     width: 60%;
-    margin-top: 3.5rem;
+    margin-top: 4rem;
   }
 }
 

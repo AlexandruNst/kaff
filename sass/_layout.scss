@@ -39,8 +39,8 @@
   }
 
   .-landing-text {
-    margin-left: $page-margin;
     margin-top: 6rem;
+    z-index: 20;
     h1 {
       //   @extend %font-title;
       //   font-size: 7vw;
@@ -96,6 +96,27 @@
       right: 80%;
       height: 40rem;
     }
+    .-dots-yellow {
+      position: absolute;
+      width: 14vw;
+      bottom: calc(#{$bar-height} + #{$square-size} - 9rem);
+
+      right: calc(#{$square-size} - 8rem);
+      span {
+        background-color: $yellow;
+      }
+    }
+    .-dots-orange {
+      position: absolute;
+      opacity: 0.2;
+      width: 40vw;
+      top: 9rem;
+      left: 5rem;
+      z-index: 0;
+      span {
+        background-color: $orange;
+      }
+    }
   }
 }
 
@@ -104,8 +125,7 @@
   position: relative;
   .-div-tradition {
     .-div-text {
-      margin-left: $page-margin;
-      padding-top: 17rem;
+      padding: 17rem 0;
     }
   }
   .-div-decoration {
@@ -125,5 +145,37 @@
         vertical-align: top;
       }
     }
+    .-dots-orange {
+      position: absolute;
+      right: 12%;
+      top: 2vw;
+      width: 20vw;
+      span {
+        background-color: $orange;
+      }
+    }
+
+    .-square-orange {
+      @extend %square;
+      background-color: $orange;
+      position: absolute;
+      bottom: $square-size;
+      right: 0;
+    }
+
+    .-yellow-pillar {
+      @extend %square-width;
+      background-color: $yellow;
+      position: absolute;
+      top: calc(100% - #{$square-size});
+
+      right: $square-size;
+      height: 30rem;
+    }
   }
+}
+
+#future {
+  background-color: $purple;
+  color: $white;
 }
