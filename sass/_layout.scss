@@ -79,19 +79,19 @@
       .-link-decoration {
         position: absolute;
         width: 88%;
-        height: 40%;
+        height: 30%;
         left: 3%;
 
         // background-color: red;
       }
       .-link-decoration-1 {
-        top: -30%;
+        top: -25%;
         border-top: 0.4rem solid $yellow;
         border-left: 0.4rem solid $yellow;
         border-right: 0.4rem solid $yellow;
       }
       .-link-decoration-2 {
-        bottom: -30%;
+        bottom: -25%;
         border-bottom: 0.4rem solid $orange;
         border-left: 0.4rem solid $orange;
         border-right: 0.4rem solid $orange;
@@ -131,6 +131,14 @@
         i {
           font-size: 3rem;
           margin: 0 1rem;
+        }
+        a {
+          transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+          display: inline-block;
+        }
+        a:hover {
+          color: $orange;
+          transform: scale(1.2);
         }
       }
     }
@@ -192,12 +200,33 @@
         }
       }
     }
+    .-socials {
+      position: absolute;
+      left: 3%;
+      bottom: 20%;
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        height: 200%;
+        width: 5px;
+        background-color: $white;
+      }
+      a {
+        margin: 2rem 0;
+      }
+    }
   }
 }
 
 #tradition {
   color: $purple;
   position: relative;
+  background-color: $white;
   .-div-tradition {
     .-div-text {
       padding: 17rem 0;
@@ -246,6 +275,14 @@
 
       right: $square-size;
       height: 30rem;
+    }
+    .-orange-pillar {
+      @extend %square-width;
+      background-color: $orange;
+      position: absolute;
+      top: -$square-size/3;
+      right: 80%;
+      height: 30vw;
     }
   }
 }
@@ -299,13 +336,23 @@
       color: $purple;
       display: flex;
       justify-content: space-around;
+      padding: 0 10vw;
       div {
         text-align: center;
-        font-size: 1.5rem;
-        @extend %font-normal-medium;
+        font-size: 1.3rem;
         padding-top: 1.4rem;
+        p {
+          margin-bottom: 0;
+          &:nth-child(2) {
+            @extend %font-normal-bold;
+          }
+          &:last-child {
+            @extend %font-normal-medium;
+          }
+        }
         i {
-          font-size: 4rem;
+          font-size: 3rem;
+          margin-bottom: 1rem;
         }
       }
     }
@@ -335,6 +382,13 @@
     display: flex;
     margin: auto;
     position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    }
     img {
       width: 65%;
       margin: 0.4rem;
@@ -381,7 +435,7 @@
       top: -$square-size;
       left: $square-size;
       @extend %square-width;
-      height: 45rem;
+      height: 39vw;
       background-color: $yellow;
     }
   }
@@ -539,7 +593,8 @@ footer {
       margin-bottom: 0rem;
       text-align: center;
       font-size: 2rem;
-      i {
+      a {
+        display: inline-block;
         margin: 0 2rem;
       }
     }

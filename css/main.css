@@ -7,12 +7,12 @@ body {
   font-weight: 300;
 }
 
-#landing .-decoration .-learn, #future .-div-decorations .-yellow-bar div, #video .-div-video-card div, #newsletter form label, #newsletter form button {
+#landing .-decoration .-learn, #future .-div-decorations .-yellow-bar div p:last-child, #video .-div-video-card div, #newsletter form label, #newsletter form button {
   font-family: "Mulish", sans-serif;
   font-weight: 600;
 }
 
-#sourcing .row .-card p:first-child, #newsletter .-div-newsletter p:first-child, footer .-div-footer div p.-t {
+#future .-div-decorations .-yellow-bar div p:nth-child(2), #sourcing .row .-card p:first-child, #newsletter .-div-newsletter p:first-child, footer .-div-footer div p.-t {
   font-family: "Mulish", sans-serif;
   font-weight: 900;
 }
@@ -34,13 +34,13 @@ body {
   }
 }
 
-#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
+#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #tradition .-div-decoration .-orange-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
   display: inline-block;
   width: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
+  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #tradition .-div-decoration .-orange-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
     width: 10vw;
   }
 }
@@ -191,19 +191,19 @@ html {
 #landing .-navbar .-link .-link-decoration {
   position: absolute;
   width: 88%;
-  height: 40%;
+  height: 30%;
   left: 3%;
 }
 
 #landing .-navbar .-link .-link-decoration-1 {
-  top: -30%;
+  top: -25%;
   border-top: 0.4rem solid #f8efba;
   border-left: 0.4rem solid #f8efba;
   border-right: 0.4rem solid #f8efba;
 }
 
 #landing .-navbar .-link .-link-decoration-2 {
-  bottom: -30%;
+  bottom: -25%;
   border-bottom: 0.4rem solid #fea47f;
   border-left: 0.4rem solid #fea47f;
   border-right: 0.4rem solid #fea47f;
@@ -236,6 +236,18 @@ html {
 #landing .-decoration .-yellow-bar div i {
   font-size: 3rem;
   margin: 0 1rem;
+}
+
+#landing .-decoration .-yellow-bar div a {
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: inline-block;
+}
+
+#landing .-decoration .-yellow-bar div a:hover {
+  color: #fea47f;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #landing .-decoration .-orange-square {
@@ -299,9 +311,38 @@ html {
           animation: arrow-animation 5s infinite ease-in-out;
 }
 
+#landing .-decoration .-socials {
+  position: absolute;
+  left: 3%;
+  bottom: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+}
+
+#landing .-decoration .-socials::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  height: 200%;
+  width: 5px;
+  background-color: #f2f3f7;
+}
+
+#landing .-decoration .-socials a {
+  margin: 2rem 0;
+}
+
 #tradition {
   color: #6d214f;
   position: relative;
+  background-color: #f2f3f7;
 }
 
 #tradition .-div-tradition .-div-text {
@@ -350,6 +391,14 @@ html {
   top: calc(100% - 10vw);
   right: 10vw;
   height: 30rem;
+}
+
+#tradition .-div-decoration .-orange-pillar {
+  background-color: #fea47f;
+  position: absolute;
+  top: -3.33333vw;
+  right: 80%;
+  height: 30vw;
 }
 
 #future {
@@ -408,16 +457,22 @@ html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 0 10vw;
 }
 
 #future .-div-decorations .-yellow-bar div {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-top: 1.4rem;
 }
 
+#future .-div-decorations .-yellow-bar div p {
+  margin-bottom: 0;
+}
+
 #future .-div-decorations .-yellow-bar div i {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 #future .-div-decorations .-dots-yellow {
@@ -449,6 +504,16 @@ html {
   display: flex;
   margin: auto;
   position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+#video .-div-video-card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 #video .-div-video-card img {
@@ -500,7 +565,7 @@ html {
   position: absolute;
   top: -10vw;
   left: 10vw;
-  height: 45rem;
+  height: 39vw;
   background-color: #f8efba;
 }
 
@@ -678,7 +743,8 @@ footer .-socials p {
   font-size: 2rem;
 }
 
-footer .-socials p i {
+footer .-socials p a {
+  display: inline-block;
   margin: 0 2rem;
 }
 
