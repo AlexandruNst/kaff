@@ -68,12 +68,16 @@ $page-margin: 15%;
   color: inherit;
   &:hover {
     text-decoration: none;
+    color: $yellow;
   }
 }
 
 body {
   @extend %font-normal;
   overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .-div-text {
