@@ -75,6 +75,10 @@ $page-margin: 15%;
 body {
   @extend %font-normal;
   overflow-x: hidden;
+  &.-no-scroll {
+    position: fixed;
+    overflow-y: scroll;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -82,9 +86,15 @@ html {
 
 .-div-text {
   margin-left: $page-margin;
+  @media (max-width: 992px) {
+    margin-left: $page-margin/3;
+  }
 
   h1 {
     font-size: 7vw;
+    @media (max-width: 992px) {
+      font-size: 10vw;
+    }
     @extend %font-title;
     position: relative;
 
@@ -95,6 +105,10 @@ html {
       position: absolute;
       width: 10%;
       height: 8px;
+      @media (max-width: 992px) {
+        height: 4px;
+        bottom: -15%;
+      }
     }
 
     &.-p {
@@ -111,6 +125,9 @@ html {
   }
   p {
     font-size: 1.3rem;
+    @media (max-width: 992px) {
+      font-size: 1.1rem;
+    }
     width: 60%;
     margin-top: 4rem;
     // z-index: 10;

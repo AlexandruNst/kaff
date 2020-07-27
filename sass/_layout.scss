@@ -11,6 +11,10 @@
     height: 8rem;
     width: 100%;
     padding: 0 6rem;
+    @media (max-width: 992px) {
+      padding: 0 2rem;
+      height: 6rem;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +26,6 @@
       }
     }
     ul {
-      //   padding-left: 0;
       display: inline-block;
       font-size: 1.5rem;
       vertical-align: middle;
@@ -31,6 +34,30 @@
         display: inline-block;
         margin: 0 3rem;
       }
+      @media (max-width: 992px) {
+        display: none;
+        &.-active {
+          display: inline;
+          position: absolute;
+          margin-top: 6rem;
+          width: 100%;
+          height: calc(100% - 6rem);
+          background-color: $purple;
+          left: 0;
+          z-index: 100;
+          padding: 0;
+          animation: slide-in 0.4s ease forwards;
+          li {
+            display: block;
+            width: 100%;
+            margin: 2rem 0;
+            text-align: center;
+            a {
+              // display: block;
+            }
+          }
+        }
+      }
     }
     .-nav-right {
       display: inline-block;
@@ -38,8 +65,13 @@
       i {
         margin-left: 3rem;
       }
+      .-menu {
+        @media (min-width: 992px) {
+          display: none;
+        }
+      }
     }
-    .-link {
+    .-brand {
       position: relative;
       background-color: $purple;
       transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -101,6 +133,9 @@
 
   .-landing-text {
     margin-top: 6rem;
+    @media (max-width: 992px) {
+      margin-top: 3rem;
+    }
     z-index: 20;
     h1 {
       //   @extend %font-title;
@@ -120,6 +155,11 @@
       right: 0;
       height: $bar-height;
       width: 80%;
+      @media (max-width: 992px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
       background-color: $yellow;
       div {
         height: 100%;
@@ -127,9 +167,16 @@
         text-align: center;
         margin: 0 3rem;
         font-size: 1.5rem;
+        @media (max-width: 992px) {
+          font-size: 1rem;
+          margin: 0;
+        }
         padding-top: 2rem;
         i {
           font-size: 3rem;
+          @media (max-width: 992px) {
+            font-size: 2rem;
+          }
           margin: 0 1rem;
         }
         a {
@@ -150,6 +197,9 @@
       right: 0;
     }
     .-yellow-pillar {
+      @media (max-width: 992px) {
+        display: none;
+      }
       @extend %square-width;
       background-color: $yellow;
       position: absolute;
@@ -169,8 +219,14 @@
       position: absolute;
       width: 14vw;
       bottom: calc(#{$bar-height} + #{$square-size} - 9rem);
-
       right: calc(#{$square-size} - 8rem);
+
+      @media (max-width: 992px) {
+        width: 30vw;
+
+        bottom: calc(#{$bar-height} + #{$square-size});
+        right: calc(#{$square-size});
+      }
       span {
         background-color: $yellow;
       }
@@ -193,7 +249,16 @@
       bottom: $square-size/2;
       right: 80%;
       font-size: 1.5rem;
-      @extend %font-normal-medium;
+
+      @media (max-width: 992px) {
+        bottom: $bar-height + 2rem;
+        left: $page-margin/3;
+        // left: 0;
+        // width: 50%;
+        text-align: left;
+        font-size: 1rem;
+      }
+      @extend %font-normal-bold;
       a {
         i {
           animation: arrow-animation 5s infinite ease-in-out;
@@ -201,6 +266,9 @@
       }
     }
     .-socials {
+      @media (max-width: 992px) {
+        display: none;
+      }
       position: absolute;
       left: 3%;
       bottom: 20%;
@@ -230,6 +298,9 @@
   .-div-tradition {
     .-div-text {
       padding: 17rem 0;
+      @media (max-width: 992px) {
+        padding: 10rem 0;
+      }
     }
   }
   .-div-decoration {
@@ -239,13 +310,22 @@
       top: -9vw;
       @extend %font-title;
       line-height: 8vw;
+      @media (max-width: 992px) {
+        line-height: 12vw;
+      }
       span:first-child {
         font-size: 3vw;
+        @media (max-width: 992px) {
+          font-size: 4vw;
+        }
         vertical-align: bottom;
         margin-left: 1rem;
       }
       span:last-child {
         font-size: 14vw;
+        @media (max-width: 992px) {
+          font-size: 24vw;
+        }
         vertical-align: top;
       }
     }
@@ -254,6 +334,11 @@
       right: 12%;
       top: 2vw;
       width: 20vw;
+      @media (max-width: 992px) {
+        right: 17%;
+        top: 10vw;
+        width: 30vw;
+      }
       span {
         background-color: $orange;
       }
@@ -281,6 +366,11 @@
       background-color: $orange;
       position: absolute;
       top: -$square-size/3;
+      @media (max-width: 992px) {
+        top: 0;
+        height: 47vw;
+        left: 3vw;
+      }
       right: 80%;
       height: 30vw;
     }
@@ -294,9 +384,15 @@
   img {
     width: 100%;
     position: absolute;
+    @media (max-width: 992px) {
+      top: 20vw;
+    }
   }
   .-div-text {
     padding-top: 55%;
+    @media (max-width: 992px) {
+      padding-top: calc(60% + 20vw);
+    }
     padding-bottom: 30rem;
   }
 
@@ -306,7 +402,11 @@
       @extend %square-width;
       top: -$square-size;
       right: $square-size;
-      height: 40rem;
+      @media (max-width: 992px) {
+        right: $square-size-mobile;
+        height: 43vw;
+      }
+      height: 35vw;
       background-color: $yellow;
     }
     .-dots-orange {
@@ -337,9 +437,16 @@
       display: flex;
       justify-content: space-around;
       padding: 0 10vw;
+      @media (max-width: 992px) {
+        padding: 0 2vw;
+        width: 100%;
+      }
       div {
         text-align: center;
         font-size: 1.3rem;
+        @media (max-width: 992px) {
+          font-size: 1rem;
+        }
         padding-top: 1.4rem;
         p {
           margin-bottom: 0;
@@ -352,6 +459,9 @@
         }
         i {
           font-size: 3rem;
+          @media (max-width: 992px) {
+            font-size: 2.5rem;
+          }
           margin-bottom: 1rem;
         }
       }
@@ -362,6 +472,10 @@
       bottom: $bar-height + 5rem;
       right: 0;
       width: 25%;
+      @media (max-width: 992px) {
+        width: 50%;
+        bottom: $bar-height + 3rem;
+      }
       span {
         background-color: $yellow;
       }
@@ -375,9 +489,15 @@
   position: relative;
   .-div-video {
     padding: 17rem 0;
+    @media (max-width: 992px) {
+      padding: 5rem 0 15rem 0;
+    }
   }
   .-div-video-card {
     width: 30%;
+    @media (max-width: 992px) {
+      width: 50%;
+    }
     background-color: $white;
     display: flex;
     margin: auto;
@@ -407,6 +527,10 @@
     .-dots-orange {
       position: absolute;
       right: 15rem;
+      @media (max-width: 992px) {
+        right: 1rem;
+        width: 50%;
+      }
       bottom: 10rem;
       width: 40%;
       span {
@@ -428,12 +552,23 @@
   color: $purple;
   position: relative;
   padding-bottom: 17rem;
+  @media (max-width: 992px) {
+    #sourcing-text {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+    padding-bottom: 4rem;
+  }
 
   .-div-decorations {
     .-yellow-pillar {
       position: absolute;
       top: -$square-size;
       left: $square-size;
+      @media (max-width: 992px) {
+        left: $square-size-mobile;
+        height: 55vw;
+      }
       @extend %square-width;
       height: 39vw;
       background-color: $yellow;
@@ -450,6 +585,9 @@
       .-dots-purple {
         position: absolute;
         top: -7rem;
+        @media (max-width: 992px) {
+          top: -3rem;
+        }
         right: 0;
         width: 50%;
         span {
@@ -460,6 +598,9 @@
     .-card {
       background-color: $yellow;
       margin: 0 3vw;
+      @media (max-width: 992px) {
+        margin: 0 10vw;
+      }
       height: 100%;
       padding: 7rem 0;
       p {
@@ -469,11 +610,17 @@
       }
       p:first-child {
         font-size: 1.7rem;
+        @media (max-width: 992px) {
+          font-size: 1.2rem;
+        }
         @extend %font-normal-bold;
         margin-bottom: 3rem;
       }
       p:last-child {
         font-size: 1.5rem;
+        @media (max-width: 992px) {
+          font-size: 1.1rem;
+        }
       }
     }
   }
@@ -501,6 +648,9 @@
       }
       &:last-child {
         width: 30%;
+        @media (max-width: 992px) {
+          width: 70%;
+        }
       }
     }
     .-purple-bar {
@@ -508,23 +658,37 @@
       justify-content: center;
       align-items: center;
       height: $bar-height;
+      @media (max-width: 992px) {
+        height: auto;
+      }
       color: $white;
       background-color: $purple;
       width: calc(100% - #{$square-size});
+      @media (max-width: 992px) {
+        width: 100%;
+      }
       // display: inline-block;
       position: relative;
       // float: right;
       .-square-orange {
+        @media (max-width: 992px) {
+          display: none;
+        }
         position: absolute;
         @extend %square;
         bottom: 100%;
         left: 100%;
+
         background-color: $orange;
       }
 
       .-dots-orange {
         position: absolute;
         width: 30%;
+        @media (max-width: 992px) {
+          width: 40%;
+          left: 60%;
+        }
         top: 75%;
         left: 80%;
         span {
@@ -540,9 +704,16 @@
       display: block;
       @extend %font-normal-medium;
       color: $white;
+      @media (max-width: 992px) {
+        padding-top: 1rem;
+      }
     }
     input {
       width: 30rem;
+      @media (max-width: 992px) {
+        width: 80vw;
+        display: block;
+      }
       height: 3rem;
       outline: none;
       border: none;
@@ -557,6 +728,10 @@
       background-color: $yellow;
       color: $purple;
       @extend %font-normal-medium;
+      @media (max-width: 992px) {
+        margin: 2rem auto;
+        display: inline-block;
+      }
     }
   }
 }
@@ -572,6 +747,9 @@ footer {
     div {
       margin-bottom: 4rem;
       font-size: 1.3rem;
+      @media (max-width: 992px) {
+        font-size: 1rem;
+      }
       flex: 25%;
       @media (max-width: 992px) {
         flex: 50%;
@@ -579,6 +757,9 @@ footer {
       .-brand {
         @extend %font-brand;
         font-size: 4rem;
+        @media (max-width: 992px) {
+          font-size: 2rem;
+        }
       }
       p.-t {
         @extend %font-normal-bold;
@@ -593,6 +774,9 @@ footer {
       margin-bottom: 0rem;
       text-align: center;
       font-size: 2rem;
+      @media (max-width: 992px) {
+        font-size: 1.5rem;
+      }
       a {
         display: inline-block;
         margin: 0 2rem;
@@ -626,5 +810,14 @@ footer {
 
   20% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
