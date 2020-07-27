@@ -298,6 +298,8 @@
   background-color: $white;
   color: $purple;
   position: relative;
+  padding-bottom: 17rem;
+
   .-div-decorations {
     .-yellow-pillar {
       position: absolute;
@@ -343,6 +345,141 @@
       }
       p:last-child {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+#newsletter {
+  position: relative;
+  padding-bottom: 17rem;
+  background-color: $white;
+  .-div-newsletter {
+    .-div-text {
+      margin-right: $square-size;
+      margin-left: 0;
+      margin-bottom: 2rem;
+      // height: $square-size;
+    }
+    p {
+      color: $purple;
+      text-align: center;
+      margin: auto;
+
+      &:first-child {
+        @extend %font-normal-bold;
+        margin-bottom: 2rem;
+      }
+      &:last-child {
+        width: 30%;
+      }
+    }
+    .-purple-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $bar-height;
+      color: $white;
+      background-color: $purple;
+      width: calc(100% - #{$square-size});
+      // display: inline-block;
+      position: relative;
+      // float: right;
+      .-square-orange {
+        position: absolute;
+        @extend %square;
+        bottom: 100%;
+        left: 100%;
+        background-color: $orange;
+      }
+
+      .-dots-orange {
+        position: absolute;
+        width: 30%;
+        top: 75%;
+        left: 80%;
+        span {
+          background-color: $orange;
+        }
+      }
+    }
+  }
+
+  form {
+    width: auto;
+    label {
+      display: block;
+      @extend %font-normal-medium;
+      color: $white;
+    }
+    input {
+      width: 30rem;
+      height: 3rem;
+      outline: none;
+      border: none;
+      background-color: $white;
+    }
+    button {
+      height: 3rem;
+      width: 8rem;
+      outline: none;
+      border: none;
+      margin-left: 2rem;
+      background-color: $yellow;
+      color: $purple;
+      @extend %font-normal-medium;
+    }
+  }
+}
+
+footer {
+  background-color: $purple;
+  color: $white;
+  .-div-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 10vw;
+
+    div {
+      margin-bottom: 4rem;
+      font-size: 1.3rem;
+      flex: 25%;
+      @media (max-width: 992px) {
+        flex: 50%;
+      }
+      .-brand {
+        @extend %font-brand;
+        font-size: 4rem;
+      }
+      p.-t {
+        @extend %font-normal-bold;
+      }
+      a {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .-socials {
+    p {
+      margin-bottom: 0rem;
+      text-align: center;
+      font-size: 2rem;
+      i {
+        margin: 0 2rem;
+      }
+    }
+  }
+  .-personal {
+    p {
+      margin-bottom: 0;
+      margin-top: 5rem;
+      padding-bottom: 3rem;
+      text-align: center;
+      i {
+        color: $yellow;
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }
