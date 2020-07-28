@@ -5,7 +5,10 @@
   color: $white;
   position: relative;
   height: 100vh;
-  min-height: 800px;
+  min-height: 900px;
+  @media (max-width: 992px) {
+    min-height: 800px;
+  }
 
   .-navbar {
     height: 8rem;
@@ -21,6 +24,9 @@
     .-brand {
       @extend %font-brand;
       font-size: 3rem;
+      @media (max-width: 992px) {
+        font-size: 1.8rem;
+      }
       &:hover {
         color: $white;
       }
@@ -62,8 +68,14 @@
     .-nav-right {
       display: inline-block;
       font-size: 1.5rem;
+      @media (max-width: 992px) {
+        font-size: 1rem;
+      }
       i {
         margin-left: 3rem;
+        @media (max-width: 992px) {
+          margin-left: 1rem;
+        }
       }
       .-menu {
         @media (min-width: 992px) {
@@ -134,7 +146,7 @@
   .-landing-text {
     margin-top: 6rem;
     @media (max-width: 992px) {
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
     z-index: 20;
     h1 {
@@ -156,7 +168,7 @@
       height: $bar-height;
       width: 80%;
       @media (max-width: 992px) {
-        width: 100%;
+        width: calc(100% - #{$square-size-mobile});
         display: flex;
         justify-content: space-around;
       }
@@ -237,6 +249,11 @@
       width: 40vw;
       top: 9rem;
       left: 5rem;
+      @media (max-width: 992px) {
+        width: 50vw;
+        top: 12rem;
+        left: 10rem;
+      }
       z-index: 0;
       span {
         background-color: $orange;
@@ -251,11 +268,11 @@
       font-size: 1.5rem;
 
       @media (max-width: 992px) {
-        bottom: $bar-height + 2rem;
+        bottom: $bar-height + 3rem;
         left: $page-margin/3;
         // left: 0;
-        // width: 50%;
-        text-align: left;
+        width: fit-content;
+        // text-align: left;
         font-size: 1rem;
       }
       @extend %font-normal-bold;
@@ -367,9 +384,10 @@
       position: absolute;
       top: -$square-size/3;
       @media (max-width: 992px) {
-        top: 0;
+        top: -$square-size-mobile;
         height: 47vw;
-        left: 3vw;
+        left: 0;
+        height: 27rem;
       }
       right: 80%;
       height: 30vw;
@@ -391,7 +409,7 @@
   .-div-text {
     padding-top: 55%;
     @media (max-width: 992px) {
-      padding-top: calc(60% + 20vw);
+      padding-top: calc(70% + 20vw);
     }
     padding-bottom: 30rem;
   }
@@ -445,7 +463,7 @@
         text-align: center;
         font-size: 1.3rem;
         @media (max-width: 992px) {
-          font-size: 1rem;
+          font-size: 2.7vw;
         }
         padding-top: 1.4rem;
         p {
@@ -487,6 +505,7 @@
   background-color: $purple;
   color: $purple;
   position: relative;
+
   .-div-video {
     padding: 17rem 0;
     @media (max-width: 992px) {
@@ -496,7 +515,7 @@
   .-div-video-card {
     width: 30%;
     @media (max-width: 992px) {
-      width: 50%;
+      width: 70%;
     }
     background-color: $white;
     display: flex;
@@ -528,7 +547,7 @@
       position: absolute;
       right: 15rem;
       @media (max-width: 992px) {
-        right: 1rem;
+        right: 0rem;
         width: 50%;
       }
       bottom: 10rem;
@@ -544,10 +563,21 @@
       left: 0;
       bottom: $square-size;
     }
+    .-square-yellow {
+      position: absolute;
+      @extend %square;
+      background-color: $yellow;
+      left: $square-size;
+      @media (max-width: 992px) {
+        left: $square-size-mobile;
+      }
+      bottom: 0;
+    }
   }
 }
 
 #sourcing {
+  overflow-x: hidden;
   background-color: $white;
   color: $purple;
   position: relative;
@@ -567,7 +597,7 @@
       left: $square-size;
       @media (max-width: 992px) {
         left: $square-size-mobile;
-        height: 55vw;
+        height: 25rem;
       }
       @extend %square-width;
       height: 39vw;
@@ -587,6 +617,7 @@
         top: -7rem;
         @media (max-width: 992px) {
           top: -3rem;
+          width: 40vw;
         }
         right: 0;
         width: 50%;
@@ -633,6 +664,9 @@
   .-div-newsletter {
     .-div-text {
       margin-right: $square-size;
+      @media (max-width: 992px) {
+        margin-right: 0;
+      }
       margin-left: 0;
       margin-bottom: 2rem;
       // height: $square-size;
@@ -748,7 +782,7 @@ footer {
       margin-bottom: 4rem;
       font-size: 1.3rem;
       @media (max-width: 992px) {
-        font-size: 1rem;
+        font-size: 0.7rem;
       }
       flex: 25%;
       @media (max-width: 992px) {
@@ -789,10 +823,26 @@ footer {
       margin-top: 5rem;
       padding-bottom: 3rem;
       text-align: center;
+      @media (max-width: 992px) {
+        font-size: 0.7rem;
+      }
       i {
+        transition: color 0.3s ease;
         color: $yellow;
         &:hover {
           color: $orange;
+        }
+      }
+      a {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -30%;
+          left: -2.5%;
+          width: 105%;
+          height: 2px;
+          background-color: $yellow;
         }
       }
     }

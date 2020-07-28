@@ -21,14 +21,14 @@ body {
   font-family: "Righteous", cursive;
 }
 
-#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #newsletter .-div-newsletter .-purple-bar .-square-orange {
+#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #video .-div-decorations .-square-yellow, #newsletter .-div-newsletter .-purple-bar .-square-orange {
   display: inline-block;
   width: 20vw;
   height: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #newsletter .-div-newsletter .-purple-bar .-square-orange {
+  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #video .-div-decorations .-square-yellow, #newsletter .-div-newsletter .-purple-bar .-square-orange {
     width: 10vw;
     height: 10vw;
   }
@@ -114,6 +114,7 @@ html {
 }
 
 .-div-text p {
+  position: relative;
   font-size: 1.3rem;
   width: 60%;
   margin-top: 4rem;
@@ -125,13 +126,25 @@ html {
   }
 }
 
+@media (max-width: 992px) {
+  .-div-text p {
+    width: 70%;
+  }
+}
+
 @use 'base';
 #landing {
   background-color: #6d214f;
   color: #f2f3f7;
   position: relative;
   height: 100vh;
-  min-height: 800px;
+  min-height: 900px;
+}
+
+@media (max-width: 992px) {
+  #landing {
+    min-height: 800px;
+  }
 }
 
 #landing .-navbar {
@@ -158,6 +171,12 @@ html {
 
 #landing .-navbar .-brand {
   font-size: 3rem;
+}
+
+@media (max-width: 992px) {
+  #landing .-navbar .-brand {
+    font-size: 1.8rem;
+  }
 }
 
 #landing .-navbar .-brand:hover {
@@ -206,8 +225,20 @@ html {
   font-size: 1.5rem;
 }
 
+@media (max-width: 992px) {
+  #landing .-navbar .-nav-right {
+    font-size: 1rem;
+  }
+}
+
 #landing .-navbar .-nav-right i {
   margin-left: 3rem;
+}
+
+@media (max-width: 992px) {
+  #landing .-navbar .-nav-right i {
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -284,7 +315,7 @@ html {
 
 @media (max-width: 992px) {
   #landing .-landing-text {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 }
 
@@ -300,7 +331,7 @@ html {
 
 @media (max-width: 992px) {
   #landing .-decoration .-yellow-bar {
-    width: 100%;
+    width: calc(100% - 20vw);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -405,6 +436,14 @@ html {
   z-index: 0;
 }
 
+@media (max-width: 992px) {
+  #landing .-decoration .-dots-orange {
+    width: 50vw;
+    top: 12rem;
+    left: 10rem;
+  }
+}
+
 #landing .-decoration .-dots-orange span {
   background-color: #fea47f;
 }
@@ -420,9 +459,11 @@ html {
 
 @media (max-width: 992px) {
   #landing .-decoration .-learn {
-    bottom: 14rem;
+    bottom: 15rem;
     left: 5%;
-    text-align: left;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 1rem;
   }
 }
@@ -562,9 +603,10 @@ html {
 
 @media (max-width: 992px) {
   #tradition .-div-decoration .-orange-pillar {
-    top: 0;
+    top: -20vw;
     height: 47vw;
-    left: 3vw;
+    left: 0;
+    height: 27rem;
   }
 }
 
@@ -592,7 +634,7 @@ html {
 
 @media (max-width: 992px) {
   #future .-div-text {
-    padding-top: calc(60% + 20vw);
+    padding-top: calc(70% + 20vw);
   }
 }
 
@@ -661,7 +703,7 @@ html {
 
 @media (max-width: 992px) {
   #future .-div-decorations .-yellow-bar div {
-    font-size: 1rem;
+    font-size: 2.7vw;
   }
 }
 
@@ -729,7 +771,7 @@ html {
 
 @media (max-width: 992px) {
   #video .-div-video-card {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -769,7 +811,7 @@ html {
 
 @media (max-width: 992px) {
   #video .-div-decorations .-dots-orange {
-    right: 1rem;
+    right: 0rem;
     width: 50%;
   }
 }
@@ -785,7 +827,21 @@ html {
   bottom: 10vw;
 }
 
+#video .-div-decorations .-square-yellow {
+  position: absolute;
+  background-color: #f8efba;
+  left: 10vw;
+  bottom: 0;
+}
+
+@media (max-width: 992px) {
+  #video .-div-decorations .-square-yellow {
+    left: 20vw;
+  }
+}
+
 #sourcing {
+  overflow-x: hidden;
   background-color: #f2f3f7;
   color: #6d214f;
   position: relative;
@@ -813,7 +869,7 @@ html {
 @media (max-width: 992px) {
   #sourcing .-div-decorations .-yellow-pillar {
     left: 20vw;
-    height: 55vw;
+    height: 25rem;
   }
 }
 
@@ -836,6 +892,7 @@ html {
 @media (max-width: 992px) {
   #sourcing .row .col-12 .-dots-purple {
     top: -3rem;
+    width: 40vw;
   }
 }
 
@@ -893,6 +950,12 @@ html {
   margin-right: 10vw;
   margin-left: 0;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  #newsletter .-div-newsletter .-div-text {
+    margin-right: 0;
+  }
 }
 
 #newsletter .-div-newsletter p {
@@ -1046,7 +1109,7 @@ footer .-div-footer div {
 
 @media (max-width: 992px) {
   footer .-div-footer div {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -1096,12 +1159,34 @@ footer .-personal p {
   text-align: center;
 }
 
+@media (max-width: 992px) {
+  footer .-personal p {
+    font-size: 0.7rem;
+  }
+}
+
 footer .-personal p i {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   color: #f8efba;
 }
 
 footer .-personal p i:hover {
   color: #fea47f;
+}
+
+footer .-personal p a {
+  position: relative;
+}
+
+footer .-personal p a::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -2.5%;
+  width: 105%;
+  height: 2px;
+  background-color: #f8efba;
 }
 
 @-webkit-keyframes arrow-animation {
