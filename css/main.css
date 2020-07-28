@@ -21,26 +21,26 @@ body {
   font-family: "Righteous", cursive;
 }
 
-#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #video .-div-decorations .-square-yellow, #newsletter .-div-newsletter .-purple-bar .-square-orange {
+#landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #newsletter .-div-newsletter .-purple-bar .-square-orange {
   display: inline-block;
   width: 20vw;
   height: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #video .-div-decorations .-square-yellow, #newsletter .-div-newsletter .-purple-bar .-square-orange {
+  #landing .-decoration .-orange-square, #tradition .-div-decoration .-square-orange, #future .-div-decorations .-square-orange, #video .-div-decorations .-square-orange, #newsletter .-div-newsletter .-purple-bar .-square-orange {
     width: 10vw;
     height: 10vw;
   }
 }
 
-#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #tradition .-div-decoration .-orange-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
+#landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #tradition .-div-decoration .-orange-pillar, #future .-div-decorations .-yellow-pillar, #video .-div-decorations .-yellow-pillar {
   display: inline-block;
   width: 20vw;
 }
 
 @media (min-width: 992px) {
-  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #tradition .-div-decoration .-orange-pillar, #future .-div-decorations .-yellow-pillar, #sourcing .-div-decorations .-yellow-pillar {
+  #landing .-decoration .-yellow-pillar, #landing .-decoration .-orange-bar, #tradition .-div-decoration .-yellow-pillar, #tradition .-div-decoration .-orange-pillar, #future .-div-decorations .-yellow-pillar, #video .-div-decorations .-yellow-pillar {
     width: 10vw;
   }
 }
@@ -627,6 +627,10 @@ html {
   }
 }
 
+#future .-div-future {
+  overflow-x: hidden;
+}
+
 #future .-div-text {
   padding-top: 55%;
   padding-bottom: 30rem;
@@ -827,16 +831,18 @@ html {
   bottom: 10vw;
 }
 
-#video .-div-decorations .-square-yellow {
+#video .-div-decorations .-yellow-pillar {
   position: absolute;
+  height: 55rem;
   background-color: #f8efba;
   left: 10vw;
-  bottom: 0;
+  top: calc(100% - 10vw);
 }
 
 @media (max-width: 992px) {
-  #video .-div-decorations .-square-yellow {
+  #video .-div-decorations .-yellow-pillar {
     left: 20vw;
+    height: 70vw;
   }
 }
 
@@ -844,7 +850,6 @@ html {
   overflow-x: hidden;
   background-color: #f2f3f7;
   color: #6d214f;
-  position: relative;
   padding-bottom: 17rem;
 }
 
@@ -855,21 +860,6 @@ html {
   #sourcing #sourcing-text {
     padding-top: 10rem;
     padding-bottom: 10rem;
-  }
-}
-
-#sourcing .-div-decorations .-yellow-pillar {
-  position: absolute;
-  top: -10vw;
-  left: 10vw;
-  height: 39vw;
-  background-color: #f8efba;
-}
-
-@media (max-width: 992px) {
-  #sourcing .-div-decorations .-yellow-pillar {
-    left: 20vw;
-    height: 25rem;
   }
 }
 
@@ -1238,6 +1228,31 @@ footer .-personal p a::after {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+[data-aos="stretch-down"] {
+  opacity: 1;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+
+[data-aos="stretch-down"].aos-animate {
+  opacity: 1;
+}
+
+@media screen {
+  [data-aos="stretch-down"] {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  [data-aos="stretch-down"].aos-animate {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
