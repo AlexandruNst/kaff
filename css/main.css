@@ -387,6 +387,8 @@ html {
 }
 
 #landing .-decoration .-yellow-pillar {
+  -webkit-animation: pillar-animation 10s ease infinite 3s;
+          animation: pillar-animation 10s ease infinite 3s;
   background-color: #f8efba;
   position: absolute;
   bottom: calc(12rem + 10vw);
@@ -1146,6 +1148,7 @@ footer .-personal p {
   margin-bottom: 0;
   margin-top: 5rem;
   padding-bottom: 3rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -1228,6 +1231,60 @@ footer .-personal p a::after {
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes pillar-animation {
+  0% {
+    height: 40%;
+  }
+  3% {
+    height: calc(10vw - 14px);
+  }
+  5% {
+    height: calc(10vw + 3px);
+  }
+  6% {
+    height: 10vw;
+  }
+  30% {
+    height: 10vw;
+  }
+  34% {
+    height: calc(40% + 10px);
+  }
+  36% {
+    height: calc(40% - 4px);
+  }
+  38% {
+    height: 40%;
+  }
+}
+
+@keyframes pillar-animation {
+  0% {
+    height: 40%;
+  }
+  3% {
+    height: calc(10vw - 14px);
+  }
+  5% {
+    height: calc(10vw + 3px);
+  }
+  6% {
+    height: 10vw;
+  }
+  30% {
+    height: 10vw;
+  }
+  34% {
+    height: calc(40% + 10px);
+  }
+  36% {
+    height: calc(40% - 4px);
+  }
+  38% {
+    height: 40%;
   }
 }
 

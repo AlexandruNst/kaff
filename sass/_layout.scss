@@ -209,6 +209,7 @@
       right: 0;
     }
     .-yellow-pillar {
+      animation: pillar-animation 10s ease infinite 3s;
       @media (max-width: 992px) {
         display: none;
       }
@@ -829,6 +830,7 @@ footer {
       margin-bottom: 0;
       margin-top: 5rem;
       padding-bottom: 3rem;
+      font-size: 1.2rem;
       text-align: center;
       @media (max-width: 992px) {
         font-size: 0.7rem;
@@ -876,6 +878,34 @@ footer {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes pillar-animation {
+  0% {
+    height: 40%;
+  }
+  3% {
+    height: calc(#{$square-size} - 14px);
+  }
+  5% {
+    height: calc(#{$square-size} + 3px);
+  }
+  6% {
+    height: $square-size;
+  }
+  30% {
+    height: $square-size;
+  }
+
+  34% {
+    height: calc(40% + 10px);
+  }
+  36% {
+    height: calc(40% - 4px);
+  }
+  38% {
+    height: 40%;
   }
 }
 
