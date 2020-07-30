@@ -3,6 +3,7 @@
 @use 'shop';
 
 #contact-landing {
+  margin-bottom: 2rem;
   @extend #shop-landing;
   .-div-contact-text {
     @extend .-div-shop-text;
@@ -86,6 +87,7 @@ form {
     @media (max-width: 992px) {
       width: 80%;
     }
+    padding-bottom: 3rem;
   }
   input {
     width: 100%;
@@ -104,6 +106,5 @@ form {
   button {
     display: block;
     margin-top: 2rem;
-    margin-bottom: 5rem;
   }
 }

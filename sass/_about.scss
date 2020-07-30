@@ -1,0 +1,14 @@
+@use 'layout';
+@use 'base';
+@use 'shop';
+
+#about-landing {
+  @extend #shop-landing;
+  margin-bottom: 2rem;
+
+  .-div-about-text {
+    @extend .-div-shop-text;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
