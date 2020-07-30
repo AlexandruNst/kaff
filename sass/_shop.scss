@@ -45,6 +45,9 @@
   background-color: $purple;
   color: $white;
   margin-bottom: 5rem;
+  @media (max-width: 992px) {
+    margin-bottom: 2rem;
+  }
   .row {
     .col-12 {
       position: relative;

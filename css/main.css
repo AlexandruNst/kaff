@@ -7,7 +7,7 @@ body {
   font-weight: 300;
 }
 
-#future .-div-decorations .-yellow-bar div p:last-child, #video .-div-video-card div, #newsletter form label, #newsletter form button {
+#future .-div-decorations .-yellow-bar div p:last-child, #video .-div-video-card div, #newsletter form label, #newsletter form button, .-bttn {
   font-family: "Mulish", sans-serif;
   font-weight: 600;
 }
@@ -932,6 +932,16 @@ html {
   }
 }
 
+#sourcing .-bttn-container {
+  padding-top: 7rem;
+}
+
+@media (max-width: 992px) {
+  #sourcing .-bttn-container {
+    padding-top: 2rem;
+  }
+}
+
 #newsletter {
   position: relative;
   padding-bottom: 17rem;
@@ -1322,6 +1332,59 @@ footer .-personal p a::after {
   border-radius: 100%;
 }
 
+p.-bttn-container {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+  p.-bttn-container {
+    padding-bottom: 2rem;
+  }
+}
+
+.-bttn {
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .-bttn {
+    padding: 0.4vw 1vw;
+  }
+}
+
+.-bttn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.-bttn-white {
+  background-color: #f2f3f7;
+  color: #6d214f;
+  border: 4px solid #f2f3f7;
+}
+
+.-bttn-white:hover {
+  color: #f2f3f7;
+  background-color: #6d214f;
+}
+
+.-bttn-purple {
+  background-color: #6d214f;
+  color: #f2f3f7;
+  border: 4px solid #6d214f;
+}
+
+.-bttn-purple:hover {
+  color: #6d214f;
+  background-color: #f2f3f7;
+}
+
 @use 'layout';
 @use 'base';
 #shop-landing {
@@ -1380,6 +1443,12 @@ footer .-personal p a::after {
   background-color: #6d214f;
   color: #f2f3f7;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 992px) {
+  #shop {
+    margin-bottom: 2rem;
+  }
 }
 
 #shop .row .col-12 {
