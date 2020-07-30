@@ -1,0 +1,92 @@
+@use 'layout';
+@use 'base';
+@use 'shop';
+
+#contact-landing {
+  @extend #shop-landing;
+  .-div-contact-text {
+    @extend .-div-shop-text;
+  }
+  .-div-find-store {
+    background-color: $white;
+    color: $purple;
+    width: 70%;
+    @media (max-width: 992px) {
+      width: 90%;
+    }
+    padding: 5rem;
+    margin: auto;
+    input {
+      margin-right: 2vw;
+    }
+    h1 {
+      @extend %font-normal-bold;
+      font-size: 5vw;
+    }
+    p {
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+form {
+  label {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    @media (max-width: 992px) {
+      font-size: 3vw;
+      padding-bottom: 2vw;
+    }
+  }
+  input {
+    border: none;
+    outline: none;
+    height: 2.8rem;
+    width: 20rem;
+    transition: background-color 0.3s ease;
+    @media (max-width: 992px) {
+      width: 65%;
+    }
+    &:focus {
+      background-color: $yellow;
+    }
+  }
+  button {
+    margin-left: 2rem;
+  }
+  .-form-group {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+.-div-contact-form {
+  .-form-group {
+    width: 40%;
+    @media (max-width: 992px) {
+      width: 80%;
+    }
+  }
+  input {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:focus {
+      background-color: $yellow;
+    }
+  }
+  button {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}
