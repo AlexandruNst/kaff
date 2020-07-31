@@ -310,12 +310,13 @@
 }
 
 #tradition {
-  overflow-x: hidden;
   color: $purple;
   position: relative;
   background-color: $white;
   .-div-tradition {
     .-div-text {
+      overflow-x: hidden;
+
       padding: 17rem 0;
       @media (max-width: 992px) {
         padding: 10rem 0;

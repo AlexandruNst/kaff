@@ -66,6 +66,7 @@ body.-no-scroll {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .-div-text {
@@ -510,13 +511,13 @@ html {
 }
 
 #tradition {
-  overflow-x: hidden;
   color: #6d214f;
   position: relative;
   background-color: #f2f3f7;
 }
 
 #tradition .-div-tradition .-div-text {
+  overflow-x: hidden;
   padding: 17rem 0;
 }
 
